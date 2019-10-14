@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>常用正则表达式 | Better than never</title>
+    <meta name="description" content="梁的个人网站">
+    <link rel="icon" href="/logo.jpg">
+    
+    <link rel="preload" href="/assets/css/0.styles.80698cd3.css" as="style"><link rel="preload" href="/assets/js/app.aa07e3f0.js" as="script"><link rel="preload" href="/assets/js/2.3c3a8b86.js" as="script"><link rel="preload" href="/assets/js/21.6a57e774.js" as="script"><link rel="prefetch" href="/assets/js/10.16485189.js"><link rel="prefetch" href="/assets/js/11.087b2c37.js"><link rel="prefetch" href="/assets/js/12.1232ddd6.js"><link rel="prefetch" href="/assets/js/13.d08737f4.js"><link rel="prefetch" href="/assets/js/14.5400c51f.js"><link rel="prefetch" href="/assets/js/15.6e20fcc4.js"><link rel="prefetch" href="/assets/js/16.8f188508.js"><link rel="prefetch" href="/assets/js/17.31b200b9.js"><link rel="prefetch" href="/assets/js/18.09631d42.js"><link rel="prefetch" href="/assets/js/19.ea1c561c.js"><link rel="prefetch" href="/assets/js/20.7e1fbe74.js"><link rel="prefetch" href="/assets/js/22.0b5e3d00.js"><link rel="prefetch" href="/assets/js/23.c0b1a40b.js"><link rel="prefetch" href="/assets/js/24.6aaf1c96.js"><link rel="prefetch" href="/assets/js/25.52f988b5.js"><link rel="prefetch" href="/assets/js/26.ca333bb8.js"><link rel="prefetch" href="/assets/js/27.c6dae7fd.js"><link rel="prefetch" href="/assets/js/28.5e816cc0.js"><link rel="prefetch" href="/assets/js/3.1a056928.js"><link rel="prefetch" href="/assets/js/4.1ae91333.js"><link rel="prefetch" href="/assets/js/5.9279dd66.js"><link rel="prefetch" href="/assets/js/6.5e5f6408.js"><link rel="prefetch" href="/assets/js/7.a81f715f.js"><link rel="prefetch" href="/assets/js/8.d07cfd7b.js"><link rel="prefetch" href="/assets/js/9.b0483dea.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.80698cd3.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">Better than never</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/Frontend/" class="nav-link router-link-active">前端相关</a></div><div class="nav-item"><a href="/resume.html" class="nav-link">个人简历</a></div><div class="nav-item"><a href="/Tools.html" class="nav-link">工具资源（待）</a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/Frontend/" class="nav-link router-link-active">前端相关</a></div><div class="nav-item"><a href="/resume.html" class="nav-link">个人简历</a></div><div class="nav-item"><a href="/Tools.html" class="nav-link">工具资源（待）</a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>常用正则表达式</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/Frontend/%E5%B8%B8%E7%94%A8%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F.html#数字校验" class="sidebar-link">数字校验</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/Frontend/%E5%B8%B8%E7%94%A8%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F.html#字符校验" class="sidebar-link">字符校验</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/Frontend/%E5%B8%B8%E7%94%A8%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F.html#特殊表达式校验" class="sidebar-link">特殊表达式校验</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/Frontend/%E5%B8%B8%E7%94%A8%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F.html#日期" class="sidebar-link">日期</a></li><li class="sidebar-sub-header"><a href="/Frontend/%E5%B8%B8%E7%94%A8%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F.html#money" class="sidebar-link">money</a></li><li class="sidebar-sub-header"><a href="/Frontend/%E5%B8%B8%E7%94%A8%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F.html#生活" class="sidebar-link">生活</a></li></ul></li><li><a href="/Frontend/%E5%B8%B8%E7%94%A8%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F.html#表单常用" class="sidebar-link">表单常用</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/Frontend/%E5%B8%B8%E7%94%A8%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F.html#应用" class="sidebar-link">应用</a><ul class="sidebar-sub-headers"></ul></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="常用正则表达式"><a href="#常用正则表达式" aria-hidden="true" class="header-anchor">#</a> 常用正则表达式</h1> <blockquote><p>2019/05/20</p></blockquote> <h2 id="数字校验"><a href="#数字校验" aria-hidden="true" class="header-anchor">#</a> 数字校验</h2> <ul><li>数字
+<ul><li>^[0-9]*$</li></ul></li> <li>n位的数字
+<ul><li>^\d{n}$</li></ul></li> <li>至少n位的数字
+<ul><li>^\d{n,}$</li></ul></li> <li>m-n位的数字
+<ul><li>^\d{m,n}$</li></ul></li> <li>零和非零开头的数字
+<ul><li>^(0|[1-9][0-9]*)$</li></ul></li> <li>非零开头的最多带两位小数的数字
+<ul><li>^([1-9][0-9]*)+(.[0-9]{1,2})?$</li></ul></li> <li>带1-2位小数的正数或负数
+<ul><li>^(-)?\d+(.\d{1,2})?$</li></ul></li> <li>正数、负数、和小数
+<ul><li>^(-|+)?\d+(.\d+)?$</li></ul></li> <li>有两位小数的正实数
+<ul><li>^[0-9]+(.[0-9]{2})?$</li></ul></li> <li>有1~3位小数的正实数
+<ul><li>^[0-9]+(.[0-9]{1,3})?$</li></ul></li> <li>整数
+　* ^-?[1-9]\d*$</li> <li>非零的正整数
+<ul><li>^[1-9]\d*$</li> <li>^([1-9][0-9]*){1,3}$</li> <li>^+?[1-9][0-9]*$</li></ul></li> <li>非零的负整数
+<ul><li>^-[1-9][]0-9&quot;*$</li> <li>^-[1-9]\d*$</li></ul></li> <li>非负整数
+<ul><li>^\d+$</li> <li>^[1-9]\d*|0$</li></ul></li> <li>非正整数
+<ul><li>^-[1-9]\d*|0$</li> <li>^((-\d+)|(0+))$</li></ul></li> <li>浮点数
+<ul><li>^(-?\d+)(.\d+)?$</li> <li>^-?([1-9]\d*.\d*|0.\d*[1-9]\d*|0?.0+|0)$</li></ul></li> <li>正浮点数
+<ul><li>^[1-9]\d*.\d*|0.\d*[1-9]\d*$</li> <li>^(([0-9]+.[0-9]<em>[1-9][0-9]</em>)|([0-9]<em>[1-9][0-9]</em>.[0-9]+)|([0-9]<em>[1-9][0-9]</em>))$</li></ul></li> <li>负浮点数
+<ul><li>^-([1-9]\d*.\d*|0.\d*[1-9]\d*)$</li> <li>^(-(([0-9]+.[0-9]<em>[1-9][0-9]</em>)|([0-9]<em>[1-9][0-9]</em>.[0-9]+)|([0-9]<em>[1-9][0-9]</em>)))$</li></ul></li> <li>非负浮点数
+<ul><li>^\d+(.\d+)?$</li> <li>^[1-9]\d*.\d*|0.\d*[1-9]\d*|0?.0+|0$</li></ul></li> <li>非正浮点数
+<ul><li>^((-\d+(.\d+)?)|(0+(.0+)?))$</li> <li>^(-([1-9]\d*.\d*|0.\d*[1-9]\d*))|0?.0+|0$</li></ul></li></ul> <h2 id="字符校验"><a href="#字符校验" aria-hidden="true" class="header-anchor">#</a> 字符校验</h2> <ul><li>汉字
+<ul><li>^[\u4e00-\u9fa5]{0,}$</li></ul></li> <li>英文和数字
+<ul><li>^[A-Za-z0-9]+$</li> <li>^[A-Za-z0-9]{4,40}$</li></ul></li> <li>长度为3-20的所有字符
+<ul><li>^.{3,20}$</li></ul></li> <li>由26个英文字母组成的字符串
+<ul><li>^[A-Za-z]+$</li></ul></li> <li>由26个大写英文字母组成的字符串
+<ul><li>^[A-Z]+$</li></ul></li> <li>由26个小写英文字母组成的字符串
+<ul><li>^[a-z]+$</li></ul></li> <li>由数字和26个英文字母组成的字符串
+<ul><li>^[A-Za-z0-9]+$</li></ul></li> <li>由数字、26个英文字母或者下划线组成的字符串
+<ul><li>^\w+$</li> <li>^\w{3,20}$</li></ul></li> <li>中文、英文、数字包括下划线
+<ul><li>^[\u4E00-\u9FA5A-Za-z0-9_]+$</li></ul></li> <li>中文、英文、数字但不包括下划线等符号
+<ul><li>^[\u4E00-\u9FA5A-Za-z0-9]+$</li> <li>^[\u4E00-\u9FA5A-Za-z0-9]{2,20}$</li></ul></li> <li>可以输入含有^%&amp;',;=?$&quot;等字符
+<ul><li>[^%&amp;',;=?$\x22]+</li></ul></li> <li>禁止输入含有~的字符
+<ul><li>[^~\x22]+</li></ul></li> <li>不以 xxx (如 jeffjade)开头/结尾的字符串
+<ul><li>^(?!jeffjade).*$</li> <li>^.*?(?&lt;!jeffjade)$</li></ul></li></ul> <h2 id="特殊表达式校验"><a href="#特殊表达式校验" aria-hidden="true" class="header-anchor">#</a> 特殊表达式校验</h2> <ul><li>中文字符
+<ul><li>[\u4e00-\u9fa5]</li></ul></li> <li>双字节字符(含汉字)
+<ul><li>[^\x00-\xff]
+　* 可以用来计算字符串的长度（一个双字节字符长度计 2，ASCII 字符计 1）</li></ul></li> <li>空白行
+<ul><li>\n\s*\r
+　* 可以用来删除空白行</li></ul></li> <li>首尾空白字符
+<ul><li>^\s*|\s*$</li> <li>(^\s*)|(\s*$)
+　* 可以用来删除行首行尾的空白字符，含空格、制表符、换页符等</li></ul></li> <li>网址 URL
+<ul><li>[a-zA-z]+://[^\s]*</li> <li>[-a-zA-Z0-9@:%.<em>\+~#=]{2,256}.[a-z]{2,6}\b([-a-zA-Z0-9@:%</em>\+.~#?&amp;//=]*)
+<ul><li>不必包含http or https</li></ul></li> <li>^http://([\w-]+.)+[\w-]+(/[\w-./?%&amp;=]*)?$</li> <li>https?😕/(www.)?[-a-zA-Z0-9@:%.<em>\+~#=]{2,256}.[a-z]{2,6}\b([-a-zA-Z0-9@:%</em>\+.~#?&amp;//=]*)
+<ul><li>必须包含http / https</li></ul></li></ul></li> <li>Email 地址
+<ul><li>^[a-zA-Z0-9_-]+@[a-zA-Z0-9_-]+(.[a-zA-Z0-9_-]+)+$</li> <li>^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$</li> <li>^\w+([-+.]\w+)<em>@\w+([-.]\w+)</em>.\w+([-.]\w+)*$</li> <li>\w[-\w.+]*@([A-Za-z0-9][-A-Za-z0-9]+.)+[A-Za-z]{2,14}</li></ul></li> <li>域名
+<ul><li>[a-zA-Z0-9][-a-zA-Z0-9]{0,62}(/.[a-zA-Z0-9][-a-zA-Z0-9]{0,62})+/.?</li></ul></li> <li>ip地址
+<ul><li>\d+.\d+.\d+.\d+</li></ul></li> <li>HTML 标记
+<ul><li>&lt;(\S*?)[^&gt;]<em>&gt;.</em>?&lt;/\1&gt;|&lt;.*? /&gt;
+　* 网上流传的版本太糟糕，上面这个也仅能匹配部分，对于复杂的嵌套标记依旧无能为力</li></ul></li> <li>xml 文件
+<ul><li>^([a-zA-Z]+-?)+[a-zA-Z0-9]+\.[x|X][m|M][l|L]$</li></ul></li> <li>合法 img 标签
+<ul><li>&lt;img.<em>\ssrc=.</em>?&gt;</li></ul></li></ul> <h3 id="日期"><a href="#日期" aria-hidden="true" class="header-anchor">#</a> 日期</h3> <ul><li>日期格式
+<ul><li>^\d{4}-\d{1,2}-\d{1,2}</li></ul></li> <li>一年的 12 个月(01～09 和 1～12)
+<ul><li>^(0?[1-9]|1[0-2])$</li></ul></li> <li>一个月的 31 天(01～09 和 1～31)
+<ul><li>^((0?[1-9])|((1|2)[0-9])|30|31)$</li></ul></li> <li>YYYY-MM-DD
+<ul><li>^((((1[6-9]|[2-9]\d)\d{2})-(0?[13578]|1[02])-(0?[1-9]|[12]\d|3[01]))|(((1[6-9]|[2-9]\d)\d{2})-(0?[13456789]|1[012])-(0?[1-9]|[12]\d|30))|(((1[6-9]|[2-9]\d)\d{2})-0?2-(0?[1-9]|1\d|2[0-8]))|(((1[6-9]|[2-9]\d)(0[48]|[2468][048]|[13579][26])|((16|[2468][048]|[3579][26])00))-0?2-29-))$</li> <li>基本上把闰年和2月等的情况都考虑进去了</li> <li>加时间验证
+<ul><li>^((((1[6-9]|[2-9]\d)\d{2})-(0?[13578]|1[02])-(0?[1-9]|[12]\d|3[01]))|(((1[6-9]|[2-9]\d)\d{2})-(0?[13456789]|1[012])-(0?[1-9]|[12]\d|30))|(((1[6-9]|[2-9]\d)\d{2})-0?2-(0?[1-9]|1\d|2[0-8]))|(((1[6-9]|[2-9]\d)(0[48]|[2468][048]|[13579][26])|((16|[2468][048]|[3579][26])00))-0?2-29-)) (20|21|22|23|[0-1]?\d):[0-5]?\d:[0-5]?\d$</li></ul></li></ul></li></ul> <h3 id="money"><a href="#money" aria-hidden="true" class="header-anchor">#</a> money</h3> <ul><li>^(0|[1-9][0-9]*)$
+<ul><li>同非负整数</li> <li>可以允许开头有一个负号：^(0|-?[1-9][0-9]*)$</li></ul></li> <li>可能的小数部分
+<ul><li>^[0-9]+(.[0-9]+)?$
+<ul><li>小数点后面至少应该有1位数,所以&quot;10.&quot;是不通过的,但是 &quot;10&quot; 和 &quot;10.2&quot; 是通过的</li></ul></li> <li>^[0-9]+(.[0-9]{2})?$
+<ul><li>这样规定小数点后面必须有两位</li></ul></li> <li>^[0-9]+(.[0-9]{1,2})?$
+<ul><li>这样允许用户只写一位小数</li></ul></li></ul></li> <li>逗号分隔(如 3,250.00)
+<ul><li>^[0-9]{1,3}(,[0-9]{3})*(.[0-9]{1,2})?$
+<ul><li>1-3 个数字,后面跟着任意个逗号+3个数字</li></ul></li> <li>^([0-9]+|[0-9]{1,3}(,[0-9]{3})*)(.[0-9]{1,2})?$
+<ul><li>逗号可选而不是必须</li></ul></li></ul></li> <li>货币格式
+<ul><li>'123123211312.333333'.replace(/(?=(?!^)(?:\d{3})+(?:.|$))(\d{3}(.\d+$)?)/g, ',$1') //输出 123,123,211,312.333333</li> <li>ps：TCL 大牛推荐</li></ul></li></ul> <h3 id="生活"><a href="#生活" aria-hidden="true" class="header-anchor">#</a> 生活</h3> <ul><li>车牌号
+<ul><li>^[京津沪渝冀豫云辽黑湘皖鲁新苏浙赣鄂桂甘晋蒙陕吉闽贵粤青藏川宁琼使领A-Z]{1}[A-Z]{1}[A-Z0-9]{4}[A-Z0-9挂学警港澳]{1}$</li></ul></li></ul> <h2 id="表单常用"><a href="#表单常用" aria-hidden="true" class="header-anchor">#</a> 表单常用</h2> <ul><li>帐号是否合法(字母开头，5-16 字节，允许字母数字下划线)
+<ul><li>^[a-zA-Z][a-zA-Z0-9_]{4,15}$</li></ul></li> <li>手机号
+<ul><li>^(13[0-9]|14[5|7]|15[0|1|2|3|5|6|7|8|9]|18[0|1|2|3|5|6|7|8|9])\d{8}$</li></ul></li> <li>国内电话号码
+<ul><li>^((\d{3,4}-)|\d{3.4}-)?\d{7,8}$
+<ul><li>XXX-XXXXXXX / XXXX-XXXXXXXX / XXX-XXXXXXX / XXX-XXXXXXXX / XXXXXXX / XXXXXXXX
+　* \d{3}-\d{8}|\d{4}-\d{7}</li> <li>XXXX-XXXXXXX / XXX-XXXXXXXX</li></ul></li></ul></li> <li>身份证号</li> <li>^\d{15}|\d{18}$
+<ul><li>15 / 18 位</li></ul></li> <li>^[1-9]\d{7}((0\d)|(1[0-2]))(([0|1|2]\d)|3[0-1])\d{3}$
+<ul><li>15 位</li></ul></li> <li>^[1-9]\d{5}[1-9]\d{3}((0\d)|(1[0-2]))(([0|1|2]\d)|3[0-1])\d{4}$
+<ul><li>18 位</li></ul></li> <li>^([0-9]){7,18}(x|X)?$ 或 ^\d{8,18}|[0-9x]{8,18}|[0-9X]{8,18}?$
+<ul><li>短身份证号码(数字、字母x结尾)</li></ul></li> <li>密码(字母开头，长度在 6~18 之间，只能包含字母、数字和下划线)
+<ul><li>^[a-zA-Z]\w{5,17}$</li></ul></li> <li>强密码(必须包含大小写字母和数字的组合，不能使用特殊字符，长度在 8-10 之间)
+<ul><li>^(?=.<em>\d)(?=.</em>[a-z])(?=.*[A-Z]).{8,10}$</li></ul></li> <li>QQ 号
+<ul><li>^[1-9][0-9]{4,}$
+　* QQ 号从 10000 开始</li></ul></li> <li>微信号
+<ul><li>^[A-Za-z][\w-]{5,19}$;</li> <li>6-20 个字母、数字、下划线和减号，必须以字母开头(不区分大小写)</li></ul></li> <li>中国邮编
+<ul><li>[1-9]\d{5}(?!\d)
+　* 中国邮政编码为6位数字</li></ul></li></ul> <h2 id="应用"><a href="#应用" aria-hidden="true" class="header-anchor">#</a> 应用</h2> <ul><li>利用正则表达式分解和转换IP地址</li></ul> <div class="language-javascript line-numbers-mode"><pre class="language-javascript"><code><span class="token keyword">function</span> <span class="token constant">IP2V</span><span class="token punctuation">(</span><span class="token parameter">ip</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token comment">// IP 地址转换成对应数值</span>
+  reg <span class="token operator">=</span> <span class="token regex">/\d+\.\d+\.\d+\.\d+/g</span><span class="token punctuation">;</span> <span class="token comment">// 匹配 IP 地址的正则表达式</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>reg<span class="token punctuation">.</span><span class="token function">test</span><span class="token punctuation">(</span>ip<span class="token punctuation">)</span><span class="token punctuation">)</span>
+    <span class="token keyword">return</span> RegExp<span class="token punctuation">.</span>$<span class="token number">1</span><span class="token operator">*</span>Math<span class="token punctuation">.</span><span class="token function">pow</span><span class="token punctuation">(</span><span class="token number">255</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token operator">+</span>RegExp<span class="token punctuation">.</span>$<span class="token number">2</span><span class="token operator">*</span>Math<span class="token punctuation">.</span><span class="token function">pow</span><span class="token punctuation">(</span><span class="token number">255</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token operator">+</span>RegExp<span class="token punctuation">.</span>$<span class="token number">3</span><span class="token operator">*</span><span class="token number">255</span><span class="token operator">+</span>RegExp<span class="token punctuation">.</span>$<span class="token number">4</span><span class="token operator">*</span><span class="token number">1</span><span class="token punctuation">;</span>
+  <span class="token keyword">else</span>
+    <span class="token keyword">throw</span> <span class="token keyword">new</span> <span class="token class-name">Error</span><span class="token punctuation">(</span><span class="token string">'Not a valid IP address!'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div><ul><li>从 URL 地址中提取文件名</li></ul> <div class="language-javascript line-numbers-mode"><pre class="language-javascript"><code><span class="token keyword">var</span> s <span class="token operator">=</span> <span class="token string">&quot;http://www.9499.net/page1.htm&quot;</span><span class="token punctuation">;</span>
+<span class="token keyword">var</span> reg <span class="token operator">=</span> <span class="token regex">/(.*/</span><span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token punctuation">}</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token operator">^</span><span class="token punctuation">.</span><span class="token punctuation">]</span><span class="token operator">+</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token operator">*</span><span class="token operator">/</span>ig<span class="token punctuation">;</span>
+s <span class="token operator">=</span> s<span class="token punctuation">.</span><span class="token function">replace</span><span class="token punctuation">(</span>reg<span class="token punctuation">,</span><span class="token string">&quot;$2&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// Page1.htm</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><ul><li>限制网页表单里的文本框输入内容
+<ul><li>EG.只能输入中文</li></ul></li></ul> <div class="language-javascript line-numbers-mode"><pre class="language-javascript"><code><span class="token keyword">var</span> onkeyup <span class="token operator">=</span> <span class="token string">&quot;value=value.replace(/^[\u4e00-\u9fa5]{0,}$/g,'')&quot;</span><span class="token punctuation">;</span>
+<span class="token keyword">var</span> onbeforepaste <span class="token operator">=</span> <span class="token string">&quot;clipboardData.setData(''text'',clipboardData.getData(''text'').replace(/^[\u4e00-\u9fa5]{0,}$/g,''))&quot;</span><span class="token punctuation">;</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div></div> <footer class="page-edit"><!----> <!----></footer> <!----> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.aa07e3f0.js" defer></script><script src="/assets/js/2.3c3a8b86.js" defer></script><script src="/assets/js/21.6a57e774.js" defer></script>
+  </body>
+</html>
